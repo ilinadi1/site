@@ -47,7 +47,8 @@ class PostController extends Controller
         );
         $name = $request->file('imgPost')->hashName();
         // название файла с его хэшированием
-        $path = $request->file('imgPost')->store('/public/images');
+        $request->file('imgPost')->store('public/images');
+
         // путь файла
 
         Post::create([

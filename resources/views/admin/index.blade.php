@@ -17,7 +17,7 @@
         @forelse ( $posts as $item )
         <div class="col">
             <div class="card-index-admin">
-                <img src="/public/storage/images/{{$item->image}}" alt="Не прогрузилось">
+                <img src="/storage/images/{{$item->image}}" alt="Не прогрузилось">
                 <h2>{{$item->title}}</h2>
                 <p>{{$item->description}}</p>
                 <div class="mb-3"><a href="/admin/edit/{{$item->id}}">Редактировать</a></div>
