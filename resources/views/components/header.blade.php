@@ -15,6 +15,7 @@
             <a href="/signUp"><img src="/storage/images/auth.png" alt="Ошибочка вышла"></a>
             @endguest
             @auth
+            <a href="/account"><img src="/storage/images/auth.png" alt="Ошибочка вышла"></a>
             <a href="/logout"><img src="/storage/images/exit.png" alt="Ошибочка вышла"></a>
             @endauth
         </div>

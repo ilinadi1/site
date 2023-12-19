@@ -18,20 +18,18 @@
 
 <body>
     <x-header></x-header>
-    {{-- @auth
-    <h2>{{Auth::user()->login}}</h2>
-    @endauth --}}
     <div class="container">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                @foreach ($sliderPosts as $sliderPost )
-                <div class="swiper-slide">{{$sliderPost->title}}
-                <img src="/storage/images/{{$sliderPost->image }}" alt="Не прогрузилось">
-                </div>
+                @foreach ($sliderPosts as $sliderPost)
+                    <div class="swiper-slide">{{ $sliderPost->title }}
+                        <img src="/storage/images/{{ $sliderPost->image }}" alt="Не прогрузилось">
+                        <a href="/onePost/{{$sliderPost->id}}">Подробнее</a>
+                    </div>
                 @endforeach
             </div>
-        <div class="swiper-pagination"></div>
-    </div>
+            <div class="swiper-pagination"></div>
+        </div>
         <h1 class="titleMain">Последние статьи</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-3">
             @forelse ($posts as $post)
@@ -44,19 +42,20 @@
                     </div>
                 </div>
             @empty
-            <h2>Нет последних постов</h2>
+                <h2>Нет последних постов</h2>
             @endforelse
         </div>
-    {{$posts->withQueryString()->links('pagination::bootstrap-5')}}
+        {{ $posts->withQueryString()->links('pagination::bootstrap-5') }}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         let swiper = new Swiper(".mySwiper", {
             pagination: {
-        el: ".swiper-pagination",
-        },
+                el: ".swiper-pagination",
+            },
         });
     </script>
     <x-footer></x-footer>
 </body>
+
 </html>

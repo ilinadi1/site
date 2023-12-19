@@ -11,7 +11,6 @@
           </li>
         </ul>
         <div>
-            <a href="/"><img src="/storage/images/auth.png" alt="Ошибочка вышла"></a>
             <a href="/"><img src="/storage/images/exit.png" alt="Ошибочка вышла"></a>
         </div>
     </div>

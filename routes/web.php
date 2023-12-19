@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\CheckRole;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Models\Category;
 
@@ -28,7 +29,7 @@ Route::get('/logout',[AuthController::class,'logout']);
 
 Route::get('/post',[PostController::class,'post']);
 
-
+Route::post('/updateAccount/{user}',[HomeController::class,'updateAccount']);
 
 Route::get('/account',function(){
     return view('account');
@@ -36,6 +37,8 @@ Route::get('/account',function(){
 
 
 Route::get('/onePost/{id}',[PostController::class,'onePost']);
+
+
 
 Route::get('postPaginate',[PostController::class,'index']);
 

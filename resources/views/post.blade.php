@@ -22,8 +22,7 @@
     <h2>{{Auth::user()->login}}</h2>
     @endauth --}}
     <div class="container">
-    </div>
-    <a href="{{'desc'}}">По новым</a>
+        <a href="{{'desc'}}">По новым</a>
     <a href="{{'asc'}}">По старым</a>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-3">
         @forelse ($posts as $post)
@@ -39,16 +38,9 @@
             <h2>Нет последних постов</h2>
         @endforelse
     </div>
-    {{-- {{$posts->withQueryString()->links('pagination::bootstrap-5')}} --}}
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        let swiper = new Swiper(".mySwiper", {
-            pagination: {
-                el: ".swiper-pagination",
-            },
-        });
-    </script>
+
+    {{-- {{$posts->withQueryString()->links('pagination::bootstrap-5')}} --}}
     <x-footer></x-footer>
 </body>
 

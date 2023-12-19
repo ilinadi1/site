@@ -38,24 +38,6 @@
                             </div>
                     </div>
             @enderror
-            <input type="date" placeholder="Дата рождения" name="dateBirthday">
-            @error('dateBirthday')
-                     <div class="alert alert-danger alert-dismissible">
-                             <div class="alert-text">
-                                {{ $message }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            </div>
-                    </div>
-            @enderror
-            <input type="text" placeholder="Номер телефона" name="phone">
-            @error('phone')
-                     <div class="alert alert-danger alert-dismissible">
-                             <div class="alert-text">
-                                {{ $message }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            </div>
-                    </div>
-            @enderror
             <input type="email" placeholder="Почта" name="email">
             @error('email')
                      <div class="alert alert-danger alert-dismissible">
